@@ -1,1 +1,8 @@
-<p>home works!</p>
+<div class="logement-list">
+  <div *ngFor="let logement of logements" class="logement-item">
+    <a [routerLink]="['/logement', logement.id]">
+      <h3>{{ logement.title }}</h3>
+      <p>{{ logement.location }}</p>
+    </a>
+  </div>
+</div>

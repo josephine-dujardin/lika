@@ -1,1 +1,12 @@
-<p>logement works!</p>
+<div *ngIf="logement; else notFound">
+  <h2>{{ logement.title }}</h2>
+  <p>{{ logement.location }}</p>
+  <ul>
+    <li *ngFor="let tag of logement.tags">{{ tag }}</li>
+  </ul>
+  <!-- Plus de détails ici -->
+</div>
+
+<ng-template #notFound>
+  <p>Logement non trouvé 😕</p>
+</ng-template>
