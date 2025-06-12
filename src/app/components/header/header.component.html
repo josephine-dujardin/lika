@@ -1,4 +1,12 @@
-<nav class="nav">
-  <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
-  <a routerLink="/a-propos" routerLinkActive="active-link">À propos</a>
-</nav>
+<header>
+  <div class="div_container">
+    <a routerLink="/">
+      <img alt="lika_logo" src="assets/logo.svg" class="home_logo" />
+    </a>
+
+    <nav class="nav_banner">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
+      <a routerLink="/a-propos" routerLinkActive="active">A propos</a>
+    </nav>
+  </div>
+</header>

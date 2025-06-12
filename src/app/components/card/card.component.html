@@ -1,0 +1,8 @@
+<ng-container *ngIf="logements.length > 0">
+  <div class="card_container">
+    <div *ngFor="let logement of logements" (click)="goToLogement(logement.id)" class="card_link">
+      <p class="card_title">{{ logement.title }}</p>
+      <img class="card_image" [src]="logement.cover" alt="Logement" />
+    </div>
+  </div>
+</ng-container>
