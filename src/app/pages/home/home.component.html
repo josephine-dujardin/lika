@@ -1,8 +1,11 @@
-<div class="logement-list">
-  <div *ngFor="let logement of logements" class="logement-item">
-    <a [routerLink]="['/logement', logement.id]">
-      <h3>{{ logement.title }}</h3>
-      <p>{{ logement.location }}</p>
-    </a>
-  </div>
-</div>
+<app-banner
+  [image]="'assets/shoreline.png'"
+  [text]="'Chez vous, partout et ailleurs'">
+</app-banner>
+
+
+<span class="card_container">
+  <span class="card_wrapper">
+    <app-card></app-card>
+  </span>
+</span>

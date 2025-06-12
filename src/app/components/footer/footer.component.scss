@@ -1,0 +1,41 @@
+.footer_container {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 209px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.div_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer_img {
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.footer_text {
+  font-size: 16px;
+}
+
+/* Responsive */
+@media screen and (max-width: 650px) {
+  .footer_container {
+    height: 150px;
+  }
+
+  .footer_img {
+    height: 30px;
+  }
+
+  .footer_text {
+    font-size: 12px;
+    text-align: center;
+  }
+}
