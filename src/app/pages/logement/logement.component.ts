@@ -3,11 +3,12 @@ import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { LogementService } from '../../services/logement.service';
 import { Logement } from '../../models/logement.model';
+import { CarouselComponent } from '../../components/carousel/carousel.component';
 
 @Component({
   selector: 'app-logement',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CarouselComponent],
   templateUrl: './logement.component.html',
   styleUrls: ['./logement.component.scss']
 })

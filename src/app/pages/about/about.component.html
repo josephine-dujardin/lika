@@ -1,1 +1,9 @@
-<p>about works!</p>
+<app-banner [image]="'assets/moutain.png'"></app-banner>
+
+<div class="dropdown_container">
+  <app-dropdown
+    *ngFor="let item of dropdowns"
+    [title]="item.title"
+    [text]="item.text">
+  </app-dropdown>
+</div>

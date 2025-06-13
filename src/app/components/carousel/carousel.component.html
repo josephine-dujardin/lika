@@ -1,1 +1,5 @@
-<p>carousel works!</p>
+<div class="carousel" *ngIf="pictures.length > 0">
+  <button (click)="prevSlide()" class="nav prev">&lt;</button>
+  <img [src]="pictures[index]" alt="Image du logement" class="carousel-image" />
+  <button (click)="nextSlide()" class="nav next">&gt;</button>
+</div>

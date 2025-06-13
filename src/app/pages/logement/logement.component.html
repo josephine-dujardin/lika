@@ -1,4 +1,5 @@
 <div *ngIf="logement; else notFound">
+  <app-carousel [pictures]="logement?.pictures ?? []"></app-carousel>
   <h2>{{ logement.title }}</h2>
   <p>{{ logement.location }}</p>
   <ul>
