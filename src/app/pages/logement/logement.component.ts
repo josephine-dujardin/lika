@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { LogementService } from '../../services/logement.service';
 import { Logement } from '../../models/logement.model';
@@ -18,13 +18,18 @@ export class LogementComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private logementService: LogementService
+    private logementService: LogementService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
     this.logementId = this.route.snapshot.paramMap.get('logementId')!;
     this.logementService.getLogements().subscribe((logements) => {
       this.logement = logements.find(l => l.id === this.logementId);
+      
+      if (!this.logement) {
+        this.router.navigate(['/404']); 
+    }
     });
   }
 }
