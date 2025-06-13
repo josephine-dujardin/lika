@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 export class DropdownComponent {
   @Input() title!: string;
   @Input() text?: string;
+  @Input() list?: string[]; 
   isOpen = false;
 
   toggle() {

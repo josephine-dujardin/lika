@@ -44,15 +44,16 @@
 
     .dropdown-list-item {
       position: relative;
-      line-height: 1.5em;
       top: -12px;
+    }
 
-      .ul-list-item {
-        list-style: none;
-        margin-block-start: 0;
-        margin-block-end: 0;
-        padding-inline-start: 10px;
-      }
+    li {
+      list-style: none;
+      line-height: 1.5em;
+    }
+
+    ul {
+      padding-inline-start: 10px;
     }
   }
 

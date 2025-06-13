@@ -4,6 +4,12 @@
     <i class="fa fa-chevron-right icon" [class.open]="isOpen"></i>
   </div>
   <div class="dropdown-body" [class.open]="isOpen">
+    <!-- Pour le texte simple (description) -->
     <div class="dropdown-item" *ngIf="text">{{ text }}</div>
+    
+    <!-- Pour les listes (équipements) -->
+    <ul class="dropdown-list" *ngIf="list && list.length > 0">
+      <li *ngFor="let item of list">{{ item }}</li>
+    </ul>
   </div>
 </div>
