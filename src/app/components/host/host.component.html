@@ -1,0 +1,13 @@
+<div class="host_container" *ngIf="host">
+  <div class="host_div">
+    <div class="host_name">
+      <div>{{ getFirstName() }}</div>
+      <div>{{ getLastName() }}</div>
+    </div>
+    <img 
+      [src]="host.picture" 
+      [alt]="'Photo de ' + host.name"
+      class="host_picture"
+    />
+  </div>
+</div>

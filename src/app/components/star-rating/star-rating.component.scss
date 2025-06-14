@@ -1,0 +1,39 @@
+.star-rating {
+  display: flex;
+  align-items: center;
+}
+
+mat-icon {
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  cursor: default;
+}
+
+mat-icon.filled {
+  color: #FF6060;
+}
+
+mat-icon.empty {
+  color: #E3E3E3;
+}
+
+/* Responsive tablet */
+@media screen and (max-width: 900px) {
+  mat-icon {
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Responsive mobile */
+@media screen and (max-width: 650px) {
+  mat-icon {
+    font-size: 15px;
+    width: 15px;
+    height: 15px;
+    padding: 3px;
+  }
+}

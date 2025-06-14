@@ -1,1 +1,34 @@
-<p>carousel works!</p>
+<section class="section" *ngIf="pictures.length > 0">
+  <div class="section-center">
+    <article 
+      *ngFor="let picture of pictures; let i = index" 
+      [class]="getSlidePosition(i)"
+    >
+      <img 
+        [src]="picture" 
+        alt="Logement" 
+        class="logement_image"
+      />
+    </article>
+
+    <p class="bullet_points" *ngIf="shouldShowControls()">
+      {{ index + 1 }}/{{ pictures.length }}
+    </p>
+
+    <button 
+      class="prev" 
+      (click)="prevSlide()" 
+      *ngIf="shouldShowControls()"
+    >
+      <mat-icon class="icon-arrow">chevron_left</mat-icon>
+    </button>
+
+    <button 
+      class="next" 
+      (click)="nextSlide()" 
+      *ngIf="shouldShowControls()"
+    >
+      <mat-icon class="icon-arrow">chevron_right</mat-icon>
+    </button>
+  </div>
+</section>

@@ -1,0 +1,49 @@
+.logement_container, .host-rating, .span_dropdown_container {
+  display: flex;
+}
+
+.logement_container {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.host-rating {
+  flex-direction: column;
+  padding: 0 40px;
+}
+
+.span_dropdown_container {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 40px;
+  .description, .equipements {
+    margin-right: 25px;
+    width: 100%;
+  }
+}
+
+/* Responsive mobile */
+@media screen and (max-width: 650px) {
+  .logement_container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .host-rating {
+    padding: 0;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .span_dropdown_container {
+    padding: 0;
+    flex-direction: column;
+  }
+}

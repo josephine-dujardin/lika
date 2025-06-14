@@ -13,7 +13,8 @@ export const routes: Routes = [
       { path: '', component: HomeComponent },
       { path: 'a-propos', component: AboutComponent },
       { path: 'logement/:logementId', component: LogementComponent },
-      { path: '**', component: NotFoundComponent }
+      { path: '**', component: NotFoundComponent },
+      { path: '404', redirectTo: '/404' }
     ]
   }
 ];

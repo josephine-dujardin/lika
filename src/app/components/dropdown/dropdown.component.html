@@ -1,0 +1,15 @@
+<div class="dropdown">
+  <div class="dropdown-header" (click)="toggle()">
+    {{ title }}
+    <mat-icon class="icon" [class.open]="isOpen">chevron_right</mat-icon>
+  </div>
+  <div class="dropdown-body" [class.open]="isOpen">
+    <!-- For simple text (description) -->
+    <div class="dropdown-item" *ngIf="text">{{ text }}</div>
+    
+    <!-- For lists (equipment) -->
+    <ul class="dropdown-list" *ngIf="list && list.length > 0">
+      <li *ngFor="let item of list">{{ item }}</li>
+    </ul>
+  </div>
+</div>

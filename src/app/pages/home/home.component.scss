@@ -5,18 +5,8 @@
   max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 70px;
+  padding: 0 40px;
 }
-
-// .card_wrapper {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-//   flex-wrap: wrap;
-//   padding: 30px;
-//   border-radius: 20px;
-//   background-color: #f6f6f6;
-// }
 
 /* Responsive tablet */
 @media screen and (max-width: 980px) {
@@ -35,7 +25,7 @@
 /* Responsive mobile */
 @media screen and (max-width: 650px) {
   .card_container {
-    margin: 0 30px;
+    margin: 0px;
     padding: 0;
   }
 }

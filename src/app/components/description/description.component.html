@@ -1,0 +1,17 @@
+<span class="description_container">
+  <div class="description_div">
+    <div class="housing-title">
+      <h1>{{ title }}</h1>
+    </div>
+    
+    <div class="housing-location">
+      <p>{{ location }}</p>
+    </div>
+    
+    <div class="housing-tags" *ngIf="tags && tags.length > 0">
+      <p *ngFor="let tag of tags; trackBy: trackByTag" class="tags">
+        {{ tag }}
+      </p>
+    </div>
+  </div>
+</span>

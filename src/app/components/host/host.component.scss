@@ -1,0 +1,25 @@
+.host_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.host_div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.host_picture {
+  border-radius: 50%;
+  height: 70px;
+  object-fit: cover;
+}
+
+.host_name {
+  font-size: 18px;
+  color: #FF6060;
+  margin-right: 15px;
+  text-align: end;
+}

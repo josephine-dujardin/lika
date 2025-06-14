@@ -1,12 +1,39 @@
-<div *ngIf="logement; else notFound">
-  <h2>{{ logement.title }}</h2>
-  <p>{{ logement.location }}</p>
-  <ul>
-    <li *ngFor="let tag of logement.tags">{{ tag }}</li>
-  </ul>
-  <!-- Plus de détails ici -->
+<div *ngIf="logement">
+  <app-carousel [pictures]="logement.pictures"></app-carousel>
+  
+  <div class="logement_container">
+    <app-description
+      [title]="logement.title"
+      [location]="logement.location"
+      [tags]="logement.tags">
+    </app-description>
+    
+    <div class="host-rating">
+      <app-host [host]="logement.host"></app-host>
+      <app-star-rating [rating]="logement.rating"></app-star-rating>
+    </div>
+  </div>
+
+  <!-- Dropdowns for Description and Equipment -->
+  <div class="span_dropdown_container">
+    <!-- Dropdown Description -->
+    <div class="description">
+      <app-dropdown 
+        title="Description" 
+        [text]="logement.description">
+      </app-dropdown>
+    </div>
+
+    <!-- Dropdown Equipement -->
+    <div class="equipements">
+      <app-dropdown 
+        title="Équipements" 
+        [list]="logement.equipments">
+      </app-dropdown>
+    </div>
+  </div>
 </div>
 
-<ng-template #notFound>
-  <p>Logement non trouvé 😕</p>
-</ng-template>
+<div *ngIf="!logement">
+  <p>Chargement...</p>
+</div>
