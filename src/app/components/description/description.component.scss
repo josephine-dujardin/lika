@@ -1,6 +1,6 @@
 .description_container {
   display: block;
-  margin: 50px 70px;
+  margin: 50px 40px;
 }
 
 .description_div {
@@ -62,6 +62,10 @@
 
 /* Responsive mobile */
 @media screen and (max-width: 650px) {
+  .description_container {
+    margin: 30px 0px;
+  }
+
   .housing-title {
     h1 {
       font-size: 24px;

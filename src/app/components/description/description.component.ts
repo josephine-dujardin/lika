@@ -13,7 +13,7 @@ export class DescriptionComponent {
   @Input() location: string = '';
   @Input() tags: string[] = [];
 
-  // Optimisation pour le trackBy dans ngFor
+  // Optimisation for trackBy in ngFor
   trackByTag(index: number, tag: string): string {
     return tag;
   }

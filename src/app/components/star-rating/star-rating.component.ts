@@ -11,23 +11,11 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class StarRatingComponent {
   @Input() rating?: string;
+  @Input() maxStars: number = 5;
 
   get stars(): boolean[] {
     const ratingNumber = parseInt(this.rating || '0');
     
-    switch (ratingNumber) {
-      case 5:
-        return [true, true, true, true, true];
-      case 4:
-        return [true, true, true, true, false];
-      case 3:
-        return [true, true, true, false, false];
-      case 2:
-        return [true, true, false, false, false];
-      case 1:
-        return [true, false, false, false, false];
-      default:
-        return [false, false, false, false, false];
-    }
+    return Array.from({ length: this.maxStars }, (_, index) => index < ratingNumber);
   }
 }

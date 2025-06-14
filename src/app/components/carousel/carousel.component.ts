@@ -56,7 +56,7 @@ export class CarouselComponent implements OnInit, OnDestroy {
   }
 
   private startAutoSlide(): void {
-    // Vérifier si on est côté client (navigateur)
+    // Check whether you are on the client side (browser)
     if (!isPlatformBrowser(this.platformId) || this.pictures.length <= 1) {
       return;
     }

@@ -1,18 +1,20 @@
 <div *ngIf="logement">
   <app-carousel [pictures]="logement.pictures"></app-carousel>
   
-  <app-description
-    [title]="logement.title"
-    [location]="logement.location"
-    [tags]="logement.tags">
-  </app-description>
-  
-  <div class="host-rating">
-    <app-host [host]="logement.host"></app-host>
-    <app-star-rating [rating]="logement.rating"></app-star-rating>
+  <div class="logement_container">
+    <app-description
+      [title]="logement.title"
+      [location]="logement.location"
+      [tags]="logement.tags">
+    </app-description>
+    
+    <div class="host-rating">
+      <app-host [host]="logement.host"></app-host>
+      <app-star-rating [rating]="logement.rating"></app-star-rating>
+    </div>
   </div>
 
-  <!-- Dropdowns pour Description et Équipements -->
+  <!-- Dropdowns for Description and Equipment -->
   <div class="span_dropdown_container">
     <!-- Dropdown Description -->
     <div class="description">
@@ -22,7 +24,7 @@
       </app-dropdown>
     </div>
 
-    <!-- Dropdown Équipements -->
+    <!-- Dropdown Equipement -->
     <div class="equipements">
       <app-dropdown 
         title="Équipements" 
